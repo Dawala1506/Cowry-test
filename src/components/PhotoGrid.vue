@@ -101,20 +101,20 @@
 
 .search-section {
   width: 100%;
-  background-color: #ccc; // Gray background
-  padding: 40px 0; // Increased height with padding
+  background-color: #ccc; 
+  padding: 40px 0; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search-bar {
-  width: 80%; // Set width to 80%
+  width: 80%; 
   position: relative;
 
   .search-icon {
     position: absolute;
-    left: 20px; // Adjust icon position
+    left: 20px; 
     top: 50%;
     transform: translateY(-50%);
     width: 16px;
@@ -124,7 +124,7 @@
 
   input {
     width: 100%;
-    padding: 12px 16px 12px 50px; // Increased left padding for more space
+    padding: 12px 16px 12px 50px; 
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -147,9 +147,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
   gap: 20px;
-  padding: 10px; // Add padding to the grid
+  padding: 10px; 
   justify-items: center;
-  margin-top: 0; // Ensure the grid touches the search section
+  margin-top: 0; 
 }
 
 .photo-item {

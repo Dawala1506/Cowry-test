@@ -2,10 +2,10 @@
     <transition name="fade">
       <div v-if="isOpen" class="image-slider-overlay" @click.self="closeSlider">
         <div class="image-slider">
-          <!-- Close Button -->
+          
           <button class="close-button" @click="closeSlider">×</button>
   
-          <!-- Image Container -->
+          
           <div class="slider-container">
             <transition :name="transitionDirection">
               <img
@@ -17,7 +17,7 @@
             </transition>
           </div>
   
-          <!-- Navigation Buttons -->
+        
           <button class="nav-button prev-button" @click="prevImage">&#10094;</button>
           <button class="nav-button next-button" @click="nextImage">&#10095;</button>
         </div>
@@ -28,14 +28,14 @@
   <script>
   export default {
     props: {
-      isOpen: Boolean, // Controls whether the slider is open
-      photos: Array, // Array of photos
-      initialIndex: Number, // Index of the initially selected photo
+      isOpen: Boolean, 
+      photos: Array, 
+      initialIndex: Number, 
     },
     data() {
       return {
-        currentIndex: this.initialIndex, // Track the current image index
-        transitionDirection: 'slide-right', // Track the transition direction
+        currentIndex: this.initialIndex, 
+        transitionDirection: 'slide-right', 
       };
     },
     methods: {
