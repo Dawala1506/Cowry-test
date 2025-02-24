@@ -1,26 +1,50 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <PhotoGrid @open-modal="openModal" />
+    <PhotoModal :isOpen="isModalOpen" :selectedPhoto="selectedPhoto" @close-modal="closeModal" />
+    <ImageSlider :isOpen="isSliderOpen" :photos="photos" :initialIndex="currentIndex" @close-slider="closeSlider" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PhotoGrid from './components/PhotoGrid.vue';
+import PhotoModal from './components/PhotoModal.vue';
+import ImageSlider from './components/ImageSlider.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    PhotoGrid,
+    PhotoModal,
+    ImageSlider,
+  },
+  data() {
+    return {
+      isModalOpen: false,
+      isSliderOpen: false,
+      selectedPhoto: null,
+      photos: [],
+      currentIndex: 0,
+    };
+  },
+  methods: {
+    openModal(photo) {
+      this.selectedPhoto = photo;
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.isModalOpen = false;
+    },
+    openSlider(index) {
+      this.currentIndex = index;
+      this.isSliderOpen = true;
+    },
+    closeSlider() {
+      this.isSliderOpen = false;
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Add global styles if needed */
 </style>
