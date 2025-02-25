@@ -169,13 +169,13 @@
       }
   
       @media (max-width: 1024px) {
-        padding: 10px 14px 10px 40px; // Adjust padding for tablets
-        font-size: 14px; // Adjust font size for tablets
+        padding: 10px 14px 10px 40px; 
+        font-size: 14px; 
       }
   
       @media (max-width: 768px) {
-        padding: 8px 12px 8px 36px; // Adjust padding for mobile
-        font-size: 12px; // Adjust font size for mobile
+        padding: 8px 12px 8px 36px; 
+        font-size: 12px; 
       }
     }
   }
@@ -188,20 +188,20 @@
     width: 80%;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(1, 7fr); // 3 columns by default
-    gap: 20px; // Space between grid items
+    grid-template-columns: repeat(1, 3fr); 
+    gap: 20px; 
     padding: 10px;
-    justify-items: center; // Center items horizontally
+    justify-items: center; 
     margin-top: 0;
   
-    // For tablets (e.g., screens less than 1024px)
+   
     @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr); // 2 columns
+      grid-template-columns: repeat(2, 1fr); 
     }
   
-    // For mobile devices (e.g., screens less than 768px)
+    
     @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr); // 1 column
+      grid-template-columns: repeat(1, 1fr); 
     }
   }
   
