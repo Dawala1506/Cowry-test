@@ -182,7 +182,7 @@
   .photo-ingrid{
     display: grid; 
     grid-template: repeat(1, 3fr);
-     gap: 60px;
+     gap: 1rem;
   }
   .photo-grid {
     width: 80%;
